@@ -1,0 +1,19 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "A Personal Webiste To Learn React and JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zbm8121/zbm8121.github.io.git"
+  },
+  "author": "Zach Machtinger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zbm8121/zbm8121.github.io/issues"
+  },
+  "homepage": "https://github.com/zbm8121/zbm8121.github.io#readme"
+}
