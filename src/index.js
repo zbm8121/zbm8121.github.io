@@ -6,22 +6,56 @@ import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-function Counter() {
-  const [counter, setCounter] = useState(0);
+const startContacts = ["Zach Machtinger", "Fabi Marrufo", "Diego Avila"];
 
-  function increment() {
-    setCounter(counter + 1);
+function AddPersonForm(props) {
+  const [person, setPerson] = useState("");
+
+  function handleChange(e) {
+    setPerson(e.target.value);
+  }
+
+  function handleSubmit(e) {
+    if (person !== "") {
+      props.handleSubmit(person);
+      setPerson("");
+    }
+    e.preventDefault();
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        placeholder="Add new contact"
+        onChange={handleChange}
+      />
+      <button type="submit">Add</button>
+    </form>
+  );
+}
+
+function PeopleList(props) {
+  const listItems = props.data.map((val, index) => <li key={index}>{val}</li>);
+  return <ul>{listItems}</ul>;
+}
+
+function ContactManager() {
+  const [contacts, setContacts] = useState(startContacts);
+
+  function addPerson(name) {
+    setContacts([...contacts, name]);
   }
 
   return (
     <div>
-      <p>{counter}</p>
-      <button onClick={increment}>Increment</button>
+      <AddPersonForm handleSubmit={addPerson} />
+      <PeopleList data={contacts} />
     </div>
   );
 }
 
-const el = <Counter />;
+const el = <ContactManager />;
 root.render(el);
 
 /* REPLACED: initial react code
