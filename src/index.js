@@ -1,71 +1,62 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
+import { createStore } from "redux";
+import { Provider, connect } from "react-redux";
 import reportWebVitals from "./reportWebVitals";
+import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const startContacts = ["Zach Machtinger", "Fabi Marrufo", "Diego Avila"];
+const initialState = {
+  count: 0,
+};
 
-function AddPersonForm(props) {
-  const [person, setPerson] = useState("");
-
-  function handleChange(e) {
-    setPerson(e.target.value);
-  }
-
-  function handleSubmit(e) {
-    if (person !== "") {
-      props.handleSubmit(person);
-      setPerson("");
-    }
-    e.preventDefault();
-  }
-
-  return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Add new contact"
-        onChange={handleChange}
-      />
-      <button type="submit">Add</button>
-    </form>
-  );
+// Action creator
+function incrementCounter(num) {
+  return { type: "INCREMENT", num: num };
 }
 
-function PeopleList(props) {
-  const listItems = props.data.map((val, index) => <li key={index}>{val}</li>);
-  return <ul>{listItems}</ul>;
+// Reducer function
+function reducer(state = initialState, action) {
+  switch (action.type) {
+    case "INCREMENT":
+      return { count: state.count + action.num };
+    default:
+      return state;
+  }
 }
 
-function ContactManager() {
-  const [contacts, setContacts] = useState(startContacts);
-
-  function addPerson(name) {
-    setContacts([...contacts, name]);
+function Counter(props) {
+  function handleClick() {
+    props.incrementCounter(1);
   }
-
   return (
     <div>
-      <AddPersonForm handleSubmit={addPerson} />
-      <PeopleList data={contacts} />
+      <p>{props.count}</p>
+      <button onClick={handleClick}>Increment</button>
     </div>
   );
 }
 
-const el = <ContactManager />;
-root.render(el);
+function mapStateToProps(state) {
+  return {
+    count: state.count,
+  };
+}
+const mapDispatchToProps = {
+  incrementCounter,
+};
 
-/* REPLACED: initial react code
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+const store = createStore(reducer);
+
+const CounterComponent = connect(mapStateToProps, mapDispatchToProps)(Counter);
+
+const el = (
+  <Provider store={store}>
+    <CounterComponent />
+  </Provider>
 );
-*/
+root.render(el);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

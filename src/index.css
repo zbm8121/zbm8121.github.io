@@ -16,6 +16,8 @@ code {
 h1, p {
   font-family: Lato;
 }
+
+/* Also used for contactManager file
 ul {
   padding: 0;
   margin:10px 0 0 0;
@@ -30,3 +32,4 @@ li {
 form {
   margin: 10px;
 }
+*/
