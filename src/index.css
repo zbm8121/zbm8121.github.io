@@ -1,35 +1,17 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-/* Above is pregenerated CSS, below is created by me! */
 h1, p {
-  font-family: Lato;
-}
-
-/* Also used for contactManager file
-ul {
-  padding: 0;
-  margin:10px 0 0 0;
-}
-li {
-  list-style-type: none;
-  padding: 10px;
-  margin: 10px;
-  background-color:rgba(61, 120, 175, 0.411);
-  border-radius: 10px;
-}
-form {
-  margin: 10px;
-}
-*/
+    font-family: Lato;
+  }
+  ul {
+    padding: 0;
+    margin:10px 0 0 0;
+  }
+  li {
+    list-style-type: none;
+    padding: 10px;
+    margin: 10px;
+    background-color:rgba(61, 120, 175, 0.411);
+    border-radius: 10px;
+  }
+  form {
+    margin: 10px;
+  }
