@@ -11,6 +11,8 @@ package-lock.json
 
 # production
 
+# old code for reference
+/oldCode
 
 # misc
 .DS_Store
