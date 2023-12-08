@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
@@ -25,15 +25,6 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
-
-        <a
-          className="App-link"
-          href="https://discovercaliforniawines.com/discover-california/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Discover California Wines
         </a>
       </header>
 
@@ -70,10 +61,7 @@ function App() {
                   embraces—completely, unconditionally—this Oregon winemaking
                   thing.
                 </Card.Text>
-                <Button
-                  href="https://discovercaliforniawines.com/discover-california/"
-                  target="_blank"
-                >
+                <Button href="https://www.oregonwine.org/" target="_blank">
                   See More
                 </Button>
               </Card.Body>
