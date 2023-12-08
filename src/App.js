@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -16,6 +16,15 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
+        </a>
+
+        <a
+          className="App-link"
+          href="https://discovercaliforniawines.com/discover-california/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Discover California Wines
         </a>
       </header>
     </div>
