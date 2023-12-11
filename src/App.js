@@ -43,7 +43,7 @@ function App() {
       </header>
 
       <div className="App-body">
-        <Row xs={1} md={4} className="g-4">
+        <Row xs={1} sm={1} lg={3} xxl={5} className="g-4">
           <Col>
             <Card>
               <Card.Img variant="top" className="p-3" src={California} />
@@ -196,12 +196,7 @@ function App() {
               />
               <Card.Body>
                 <Card.Title>Wines of South Africa</Card.Title>
-                <Card.Text>
-                  It takes a certain character to grow an Oregon grape for an
-                  Oregon wine. A character that honors the power of the land and
-                  embraces—completely, unconditionally—this Oregon winemaking
-                  thing.
-                </Card.Text>
+                <Card.Text>Welcome to our world of discovery.</Card.Text>
                 <Button href="https://www.wosa.co.za/home/" target="_blank">
                   See More
                 </Button>
@@ -218,12 +213,10 @@ function App() {
               <Card.Body>
                 <Card.Title>Champagne</Card.Title>
                 <Card.Text>
-                  It takes a certain character to grow an Oregon grape for an
-                  Oregon wine. A character that honors the power of the land and
-                  embraces—completely, unconditionally—this Oregon winemaking
-                  thing.
+                  Terroir, Tradition, and Modernity. Delve into the fascinating
+                  world of Champagne.
                 </Card.Text>
-                <Button href="https://www.oregonwine.org/" target="_blank">
+                <Button href="https://www.champagne.fr/en/" target="_blank">
                   See More
                 </Button>
               </Card.Body>
@@ -239,12 +232,11 @@ function App() {
               <Card.Body>
                 <Card.Title>Vins De Bourgogne</Card.Title>
                 <Card.Text>
-                  It takes a certain character to grow an Oregon grape for an
-                  Oregon wine. A character that honors the power of the land and
-                  embraces—completely, unconditionally—this Oregon winemaking
-                  thing.
+                  Bourgogne and its appellations. Famous for its prestigious
+                  Climats, classified as Premier and Grand Crus, Bourgogne also
+                  offers some delightful Village and Régionale appellations.
                 </Card.Text>
-                <Button href="https://www.oregonwine.org/" target="_blank">
+                <Button href="https://www.bourgogne-wines.com/" target="_blank">
                   See More
                 </Button>
               </Card.Body>
@@ -260,12 +252,12 @@ function App() {
               <Card.Body>
                 <Card.Title>Vins De Bordeaux</Card.Title>
                 <Card.Text>
-                  It takes a certain character to grow an Oregon grape for an
-                  Oregon wine. A character that honors the power of the land and
-                  embraces—completely, unconditionally—this Oregon winemaking
-                  thing.
+                  Diversity is our culture. Diversity is a strength and an
+                  asset, and that's a fact! In the Bordeaux terroir, diversity
+                  is found everywhere: in the land, in the people, and most of
+                  all in the wines.
                 </Card.Text>
-                <Button href="https://www.oregonwine.org/" target="_blank">
+                <Button href="https://www.bordeaux.com/us/" target="_blank">
                   See More
                 </Button>
               </Card.Body>
@@ -277,12 +269,9 @@ function App() {
               <Card.Body>
                 <Card.Title>Italian Wine Central</Card.Title>
                 <Card.Text>
-                  It takes a certain character to grow an Oregon grape for an
-                  Oregon wine. A character that honors the power of the land and
-                  embraces—completely, unconditionally—this Oregon winemaking
-                  thing.
+                  Your first stop for information about the wines of Italy.
                 </Card.Text>
-                <Button href="https://www.oregonwine.org/" target="_blank">
+                <Button href="https://italianwinecentral.com/" target="_blank">
                   See More
                 </Button>
               </Card.Body>
@@ -294,12 +283,10 @@ function App() {
               <Card.Body>
                 <Card.Title>Spanish Wines</Card.Title>
                 <Card.Text>
-                  It takes a certain character to grow an Oregon grape for an
-                  Oregon wine. A character that honors the power of the land and
-                  embraces—completely, unconditionally—this Oregon winemaking
-                  thing.
+                  If you had to determine a national drink for Spain, no doubt
+                  it would be Spanish wines.
                 </Card.Text>
-                <Button href="https://www.oregonwine.org/" target="_blank">
+                <Button href="https://www.spanish-wines.org/" target="_blank">
                   See More
                 </Button>
               </Card.Body>
@@ -315,12 +302,10 @@ function App() {
               <Card.Body>
                 <Card.Title>Wines of Portugal</Card.Title>
                 <Card.Text>
-                  It takes a certain character to grow an Oregon grape for an
-                  Oregon wine. A character that honors the power of the land and
-                  embraces—completely, unconditionally—this Oregon winemaking
-                  thing.
+                  A world of difference. Because it's all about difference, when
+                  we talk about Portuguese wines.
                 </Card.Text>
-                <Button href="https://www.oregonwine.org/" target="_blank">
+                <Button href="https://winesofportugal.com/en/" target="_blank">
                   See More
                 </Button>
               </Card.Body>
