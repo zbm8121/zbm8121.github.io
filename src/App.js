@@ -1,5 +1,8 @@
 import React from "react";
 
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
@@ -12,8 +15,8 @@ import NewYork from "./images/new-york.png";
 import Australia from "./images/australia.png";
 import NewZealand from "./images/new_zealand.svg";
 import Chile from "./images/chile.svg";
-import Argentina from "./images/argentina.jpeg";
-import SouthAfrica from "./images/south_africa.jpg";
+import Argentina from "./images/argentina.png";
+import SouthAfrica from "./images/south_africa.png";
 import Champagne from "./images/champagne.png";
 import Bourgogne from "./images/bourgogne.svg";
 import Bordeaux from "./images/bordeaux.svg";
@@ -21,40 +24,30 @@ import Italy from "./images/italy.svg";
 import Spain from "./images/spain.png";
 import Portugal from "./images/portugal.svg";
 
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-
-      <div className="App-body">
-        <Row xs={1} sm={1} lg={3} xxl={5} className="g-4">
+    <div>
+      <div className="pb-3">
+        <Navbar fixed="top" className="bg-warning">
+          <Navbar.Brand href="/" className="navigation">Wines of the World</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Wine Regions</Nav.Link>
+          </Nav>
+        </Navbar>
+      </div>
+      <div className="pt-5 pb-2 bg-dark-subtle">
+        <Row xs={1} sm={1} md={3} lg={5} className="g-4 px-2">
           <Col>
-            <Card>
+            <Card className="bg-secondary-subtle">
               <Card.Img variant="top" className="p-3" src={California} />
               <Card.Body>
                 <Card.Title>California Wines</Card.Title>
                 <Card.Text>
-                  Discover California. You might say Californians are serious
-                  about wine and relaxed about everything else. But when you're
-                  surrounded by natural wonder and constant sunshine, it's
-                  pretty easy to smile. Of course, a glass of California wine
-                  always helps.
+                  When you're surrounded by natural wonder and constant
+                  sunshine, it's pretty easy to smile. Of course, a glass of
+                  California wine always helps.
                 </Card.Text>
                 <Button
                   href="https://discovercaliforniawines.com/discover-california/"
@@ -65,8 +58,8 @@ function App() {
               </Card.Body>
             </Card>
           </Col>
-          <Col>
-            <Card>
+          <Col className="pt-3">
+            <Card className="bg-secondary-subtle">
               <Card.Img variant="top" className="p-2 pt-3 pb-1" src={Oregon} />
               <Card.Body>
                 <Card.Title>Oregon Wine</Card.Title>
@@ -82,8 +75,45 @@ function App() {
               </Card.Body>
             </Card>
           </Col>
+          <Col className="pt-5">
+            <Card className="bg-secondary-subtle">
+              <Card.Img variant="top" className="p-2 pt-3 pb-1" src={NewYork} />
+              <Card.Body>
+                <Card.Title>New York Wines</Card.Title>
+                <Card.Text>
+                  Boldly, rooted. Boldly, evolving. Boldly, NY. Boldly, nuanced.
+                  Boldly, open. Boldly NY.
+                </Card.Text>
+                <Button href="https://newyorkwines.org/" target="_blank">
+                  See More
+                </Button>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col className="pt-3">
+            <Card className="bg-secondary-subtle">
+              <Card.Img
+                variant="top"
+                className="p-2 pt-3 pb-1"
+                src={Argentina}
+              />
+              <Card.Body>
+                <Card.Title>Wines of Argentina</Card.Title>
+                <Card.Text>
+                  Argentina is a wine country that can be discovered and enjoyed
+                  from north to south.
+                </Card.Text>
+                <Button
+                  href="https://www.winesofargentina.org/en/"
+                  target="_blank"
+                >
+                  See More
+                </Button>
+              </Card.Body>
+            </Card>
+          </Col>
           <Col>
-            <Card>
+            <Card className="bg-secondary-subtle">
               <Card.Img
                 variant="top"
                 className="p-2 pt-3 pb-1"
@@ -102,38 +132,36 @@ function App() {
             </Card>
           </Col>
           <Col>
-            <Card>
-              <Card.Img variant="top" className="p-2 pt-3 pb-1" src={NewYork} />
+            <Card className="bg-secondary-subtle">
+              <Card.Img variant="top" className="p-2 pt-3 pb-1" src={Italy} />
               <Card.Body>
-                <Card.Title>New York Wines</Card.Title>
+                <Card.Title>Italian Wine Central</Card.Title>
                 <Card.Text>
-                  Boldly, rooted. Boldly, evolving. Boldly, NY. Boldly, nuanced.
-                  Boldly, open. Boldly NY.
+                  Your first stop for information about the wines of Italy.
                 </Card.Text>
-                <Button href="https://newyorkwines.org/" target="_blank">
+                <Button href="https://italianwinecentral.com/" target="_blank">
                   See More
                 </Button>
               </Card.Body>
             </Card>
           </Col>
-          <Col>
-            <Card>
-              <Card.Img
-                variant="top"
-                className="p-2 pt-3 pb-1"
-                src={Australia}
-              />
+          <Col className="pt-2">
+            <Card className="bg-secondary-subtle">
+              <Card.Img variant="top" className="p-2 pt-3 pb-1" src={Chile} />
               <Card.Body>
-                <Card.Title>Wine Australia</Card.Title>
-                <Card.Text>Wine Australia for Australian wine.</Card.Text>
-                <Button href="https://www.wineaustralia.com/" target="_blank">
+                <Card.Title>Wines of Chile</Card.Title>
+                <Card.Text>
+                  Wine is in our nature. Chilean Wines is proudly shaking up the
+                  global wine scene.
+                </Card.Text>
+                <Button href="https://www.winesofchile.org/" target="_blank">
                   See More
                 </Button>
               </Card.Body>
             </Card>
           </Col>
-          <Col>
-            <Card>
+          <Col className="pt-4">
+            <Card className="bg-secondary-subtle">
               <Card.Img
                 variant="top"
                 className="p-2 pt-3 pb-1"
@@ -148,47 +176,8 @@ function App() {
               </Card.Body>
             </Card>
           </Col>
-          <Col>
-            <Card>
-              <Card.Img variant="top" className="p-2 pt-3 pb-1" src={Chile} />
-              <Card.Body>
-                <Card.Title>Wines of Chile</Card.Title>
-                <Card.Text>
-                  Wine is in our nature. Chilean Wines is proudly shaking up the
-                  global wine scene. Winegrowers don't try to imitate the Old
-                  World.
-                </Card.Text>
-                <Button href="https://www.winesofchile.org/" target="_blank">
-                  See More
-                </Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card>
-              <Card.Img
-                variant="top"
-                className="p-2 pt-3 pb-1"
-                src={Argentina}
-              />
-              <Card.Body>
-                <Card.Title>Wines of Argentina</Card.Title>
-                <Card.Text>
-                  The Journey Wine. Argentina is a wine country that can be
-                  discovered and enjoyed from north to south. Come and explore
-                  it!
-                </Card.Text>
-                <Button
-                  href="https://www.winesofargentina.org/en/"
-                  target="_blank"
-                >
-                  See More
-                </Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card>
+          <Col className="pt-2">
+            <Card className="bg-secondary-subtle">
               <Card.Img
                 variant="top"
                 className="p-2 pt-3 pb-1"
@@ -204,7 +193,7 @@ function App() {
             </Card>
           </Col>
           <Col>
-            <Card>
+            <Card className="bg-secondary-subtle">
               <Card.Img
                 variant="top"
                 className="p-2 pt-3 pb-1"
@@ -223,7 +212,7 @@ function App() {
             </Card>
           </Col>
           <Col>
-            <Card>
+            <Card className="bg-secondary-subtle">
               <Card.Img
                 variant="top"
                 className="p-2 pt-3 pb-1"
@@ -242,8 +231,8 @@ function App() {
               </Card.Body>
             </Card>
           </Col>
-          <Col>
-            <Card>
+          <Col className="pt-1">
+            <Card className="bg-secondary-subtle">
               <Card.Img
                 variant="top"
                 className="p-2 pt-3 pb-1"
@@ -252,10 +241,9 @@ function App() {
               <Card.Body>
                 <Card.Title>Vins De Bordeaux</Card.Title>
                 <Card.Text>
-                  Diversity is our culture. Diversity is a strength and an
-                  asset, and that's a fact! In the Bordeaux terroir, diversity
-                  is found everywhere: in the land, in the people, and most of
-                  all in the wines.
+                  Diversity is a strength and an asset, and that's a fact! In
+                  the Bordeaux terroir, diversity is found everywhere: in the
+                  land, in the people, and most of all in the wines.
                 </Card.Text>
                 <Button href="https://www.bordeaux.com/us/" target="_blank">
                   See More
@@ -263,37 +251,24 @@ function App() {
               </Card.Body>
             </Card>
           </Col>
-          <Col>
-            <Card>
-              <Card.Img variant="top" className="p-2 pt-3 pb-1" src={Italy} />
+          <Col className="pt-2">
+            <Card className="bg-secondary-subtle">
+              <Card.Img
+                variant="top"
+                className="p-2 pt-3 pb-1"
+                src={Australia}
+              />
               <Card.Body>
-                <Card.Title>Italian Wine Central</Card.Title>
-                <Card.Text>
-                  Your first stop for information about the wines of Italy.
-                </Card.Text>
-                <Button href="https://italianwinecentral.com/" target="_blank">
+                <Card.Title>Wine Australia</Card.Title>
+                <Card.Text>Wine Australia for Australian wine.</Card.Text>
+                <Button href="https://www.wineaustralia.com/" target="_blank">
                   See More
                 </Button>
               </Card.Body>
             </Card>
           </Col>
-          <Col>
-            <Card>
-              <Card.Img variant="top" className="p-2 pt-3 pb-1" src={Spain} />
-              <Card.Body>
-                <Card.Title>Spanish Wines</Card.Title>
-                <Card.Text>
-                  If you had to determine a national drink for Spain, no doubt
-                  it would be Spanish wines.
-                </Card.Text>
-                <Button href="https://www.spanish-wines.org/" target="_blank">
-                  See More
-                </Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card>
+          <Col className="pt-1">
+            <Card className="bg-secondary-subtle">
               <Card.Img
                 variant="top"
                 className="p-2 pt-3 pb-1"
@@ -306,6 +281,21 @@ function App() {
                   we talk about Portuguese wines.
                 </Card.Text>
                 <Button href="https://winesofportugal.com/en/" target="_blank">
+                  See More
+                </Button>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col>
+            <Card className="bg-secondary-subtle">
+              <Card.Img variant="top" className="p-2 pt-3 pb-1" src={Spain} />
+              <Card.Body>
+                <Card.Title>Spanish Wines</Card.Title>
+                <Card.Text>
+                  If you had to determine a national drink for Spain, no doubt
+                  it would be Spanish wines.
+                </Card.Text>
+                <Button href="https://www.spanish-wines.org/" target="_blank">
                   See More
                 </Button>
               </Card.Body>
